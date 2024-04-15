@@ -159,24 +159,50 @@ color:#A7AAAD;
     color:#458D7E;
 }
 
-header{
-    #fond{
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        position: absolute;
+$mobile: 375px;
+@mixin mobile {
+    @media only screen and (max-width: $mobile) {
+      @content;
     }
+  }
+
+  header{
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     color: #fff;
+    @include mobile{
+        align-items: center;
+    }
+    #hamburger{
+        display: none;
+        @include mobile{
+            display: block;
+            width: 24px;
+        }
+    }
+    #fond{
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        position: absolute;
+        @include mobile{
+            object-fit: cover;
+        }
+    }
     nav{
         display: flex;
         justify-content: space-between;
         margin:44px;
+        @include mobile{
+            width: 75%;
+        }
         ul{
             display: flex;
+            @include mobile{
+                display: none;
+            }
             li{
                 list-style-type: none;
                 padding: 20px;
@@ -202,6 +228,9 @@ header{
         height: 107.48px;
         width: 30px;
         margin: 100px auto 0;
+        @include mobile{
+            margin: 50% auto 0;
+        }
     }
     h1{
         margin: 0 auto;
@@ -209,32 +238,68 @@ header{
         font-family: $fontFraunce;
         font-weight: $fontWeightFrauncesBold;
         letter-spacing: 8.75px;
+        @include mobile{
+            font-size: 40px;
+            width: 75%;
+            text-align: center;
+        }
     }
     #logo{
         width: 170px;
         height: auto;
+        @include mobile{
+            height: 24px;
+            width: auto;
+        }
     }
 }
 
 main{
+    width: 100%;
     #firstContainer{
         @include flexCenter;
+        @include mobile{
+            flex-direction: column-reverse;
+        }
         img{
             width: 50%;
-            height: auto
+            height: auto;
+            @include mobile{
+                width: 100%;
+            }
         }
         aside{
             margin: auto;
             width: 445px;
+            @include mobile{
+                width: 75%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
             h2{
-                @include fontH2
+                @include fontH2;
+                @include mobile{
+                    text-align: center;
+                    font-size: 32px;
+                    margin-top: 20px;
+                }
+
             }
             p{
                 @include fontParagraphe;
                 padding: 20px 0;
+                @include mobile{
+                    font-size: 18px;
+                    text-align: center;
+                }
                 a{
                   @include fontLink;
-                  display: inline-block;  
+                  display: inline-block;
+                  @include mobile{
+                    font-size: 15px;
+                    margin-bottom: 20px;
+                  } 
                 }
                 a:after{
                     @include underLink;
@@ -253,22 +318,47 @@ main{
 
     #secondContainer{
         @include flexCenter;
+        @include mobile{
+            flex-direction: column;
+        }
         img{
             width: 50%;
             height: auto;
+            @include mobile{
+                width: 100%;
+            }
         }
         aside{
             margin: auto;
             width: 445px;
+            @include mobile{
+                width: 75%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
             h2{
-                @include fontH2
+                @include fontH2;
+                @include mobile{
+                    text-align: center;
+                    font-size: 32px;
+                    margin-top: 20px;
+                }
             }
             p{
                 @include fontParagraphe;
                 padding: 20px 0;
+                @include mobile{
+                    font-size: 18px;
+                    text-align: center;
+                    margin-top: 20px;
+                }
                 a{
                   @include fontLink;
-                  display: inline-block;  
+                  display: inline-block; 
+                  @include mobile{
+                    font-size: 15px;
+                  }
                 }
                 a:after{
                     @include underLink;
@@ -289,18 +379,28 @@ main{
         align-items: center;
         width: 100%;
         height: 600px;
+        @include mobile{
+            flex-direction: column;
+        }
         .text{
             padding-bottom: 30px;
             position: absolute;
         }
         img{
             width: 100%;
+            @include mobile{
+                
+            }
         }
         #cherry{
             width: 50%;
             display: flex;
             justify-content: center;
             align-items: flex-end;
+            @include mobile{
+                width: 100%;
+                margin-top: 40px;
+            }
             
             h2{
                 @include fontH2bis;
@@ -317,6 +417,9 @@ main{
             display: flex;
             align-items: flex-end;
             justify-content: center;
+            @include mobile{
+                width: 100%;
+            }
             h2{
                 @include fontH2bis;
                 color: #052C3B;
@@ -336,25 +439,44 @@ main{
         h2{
             @include h2Testimonial;
             margin: 100px;
+            @include mobile{
+                font-size: 16px;
+            }
         }
         p{
             @include pTestimonial;
             margin: 20px;
+            @include mobile{
+                font-size: 18px;
+            }
         }
         .name{
             @include fontName;
             margin-bottom: -20px;
+            @include mobile{
+                font-size: 18px;
+            }
         }
         .job{
             @include fontJob;
             margin-bottom: 100px;
+            @include mobile{
+                font-size: 14px;
+            }
         }
         img{
             @include oval;
             margin: 50px;
+            @include mobile{
+                width: 72px;
+                margin: 20px;
+            }
         }
         #testimonials{
             @include flexCenter;
+            @include mobile{
+                flex-direction: column
+            }
             #emily{
                 @include flexCenter;
                 flex-direction: column;
@@ -376,10 +498,18 @@ main{
     }
 
     #fifthContainer{
+        @include mobile{
+            display: flex;
+            flex-wrap: wrap;
+        }
         img{
             width: 25%;
             height: auto;
             margin: -2px;
+            @include mobile{
+                width: 50%;
+                margin: 0;
+            }
         }
     }
 }
@@ -406,10 +536,16 @@ footer{
     }
    svg{
         margin: 20px;
+        @include mobile{
+            width: 20px;
+        }
         &:hover{
             path{
                 fill: #fff;
             }
         }
+   }
+   #icone{
+    display: flex;
    }
 }

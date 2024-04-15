@@ -19,19 +19,49 @@ header {
   flex-direction: column;
   color: #fff;
 }
+@media only screen and (max-width: 375px) {
+  header {
+    align-items: center;
+  }
+}
+header #hamburger {
+  display: none;
+}
+@media only screen and (max-width: 375px) {
+  header #hamburger {
+    display: block;
+    width: 24px;
+  }
+}
 header #fond {
   width: 100%;
   height: 100%;
   z-index: -1;
   position: absolute;
 }
+@media only screen and (max-width: 375px) {
+  header #fond {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 header nav {
   display: flex;
   justify-content: space-between;
   margin: 44px;
 }
+@media only screen and (max-width: 375px) {
+  header nav {
+    width: 75%;
+  }
+}
 header nav ul {
   display: flex;
+}
+@media only screen and (max-width: 375px) {
+  header nav ul {
+    display: none;
+  }
 }
 header nav ul li {
   list-style-type: none;
@@ -57,6 +87,11 @@ header #arrow {
   width: 30px;
   margin: 100px auto 0;
 }
+@media only screen and (max-width: 375px) {
+  header #arrow {
+    margin: 50% auto 0;
+  }
+}
 header h1 {
   margin: 0 auto;
   font-size: 56px;
@@ -64,22 +99,56 @@ header h1 {
   font-weight: 900;
   letter-spacing: 8.75px;
 }
+@media only screen and (max-width: 375px) {
+  header h1 {
+    font-size: 40px;
+    width: 75%;
+    text-align: center;
+  }
+}
 header #logo {
   width: 170px;
   height: auto;
 }
+@media only screen and (max-width: 375px) {
+  header #logo {
+    height: 24px;
+    width: auto;
+  }
+}
 
+main {
+  width: 100%;
+}
 main #firstContainer {
   display: flex;
   justify-content: center;
+}
+@media only screen and (max-width: 375px) {
+  main #firstContainer {
+    flex-direction: column-reverse;
+  }
 }
 main #firstContainer img {
   width: 50%;
   height: auto;
 }
+@media only screen and (max-width: 375px) {
+  main #firstContainer img {
+    width: 100%;
+  }
+}
 main #firstContainer aside {
   margin: auto;
   width: 445px;
+}
+@media only screen and (max-width: 375px) {
+  main #firstContainer aside {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 main #firstContainer aside h2 {
   font-family: Fraunces 9pt Soft;
@@ -89,6 +158,13 @@ main #firstContainer aside h2 {
   letter-spacing: -0.2857142985px;
   text-align: left;
   color: #24303E;
+}
+@media only screen and (max-width: 375px) {
+  main #firstContainer aside h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 20px;
+  }
 }
 main #firstContainer aside p {
   font-family: Barlow;
@@ -100,6 +176,12 @@ main #firstContainer aside p {
   color: #808397;
   padding: 20px 0;
 }
+@media only screen and (max-width: 375px) {
+  main #firstContainer aside p {
+    font-size: 18px;
+    text-align: center;
+  }
+}
 main #firstContainer aside p a {
   font-family: Fraunces 9pt Soft;
   font-size: 15px;
@@ -110,6 +192,12 @@ main #firstContainer aside p a {
   text-decoration: none;
   color: #24303E;
   display: inline-block;
+}
+@media only screen and (max-width: 375px) {
+  main #firstContainer aside p a {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
 }
 main #firstContainer aside p a:after {
   content: " ";
@@ -135,13 +223,31 @@ main #secondContainer {
   display: flex;
   justify-content: center;
 }
+@media only screen and (max-width: 375px) {
+  main #secondContainer {
+    flex-direction: column;
+  }
+}
 main #secondContainer img {
   width: 50%;
   height: auto;
 }
+@media only screen and (max-width: 375px) {
+  main #secondContainer img {
+    width: 100%;
+  }
+}
 main #secondContainer aside {
   margin: auto;
   width: 445px;
+}
+@media only screen and (max-width: 375px) {
+  main #secondContainer aside {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 main #secondContainer aside h2 {
   font-family: Fraunces 9pt Soft;
@@ -151,6 +257,13 @@ main #secondContainer aside h2 {
   letter-spacing: -0.2857142985px;
   text-align: left;
   color: #24303E;
+}
+@media only screen and (max-width: 375px) {
+  main #secondContainer aside h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 20px;
+  }
 }
 main #secondContainer aside p {
   font-family: Barlow;
@@ -162,6 +275,13 @@ main #secondContainer aside p {
   color: #808397;
   padding: 20px 0;
 }
+@media only screen and (max-width: 375px) {
+  main #secondContainer aside p {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
 main #secondContainer aside p a {
   font-family: Fraunces 9pt Soft;
   font-size: 15px;
@@ -172,6 +292,11 @@ main #secondContainer aside p a {
   text-decoration: none;
   color: #24303E;
   display: inline-block;
+}
+@media only screen and (max-width: 375px) {
+  main #secondContainer aside p a {
+    font-size: 15px;
+  }
 }
 main #secondContainer aside p a:after {
   content: " ";
@@ -200,6 +325,11 @@ main #thirdContainer {
   width: 100%;
   height: 600px;
 }
+@media only screen and (max-width: 375px) {
+  main #thirdContainer {
+    flex-direction: column;
+  }
+}
 main #thirdContainer .text {
   padding-bottom: 30px;
   position: absolute;
@@ -212,6 +342,12 @@ main #thirdContainer #cherry {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+}
+@media only screen and (max-width: 375px) {
+  main #thirdContainer #cherry {
+    width: 100%;
+    margin-top: 40px;
+  }
 }
 main #thirdContainer #cherry h2 {
   font-family: Fraunces 9pt Soft;
@@ -238,6 +374,11 @@ main #thirdContainer #orange {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+}
+@media only screen and (max-width: 375px) {
+  main #thirdContainer #orange {
+    width: 100%;
+  }
 }
 main #thirdContainer #orange h2 {
   font-family: Fraunces 9pt Soft;
@@ -276,6 +417,11 @@ main #fourContainer h2 {
   color: #A7AAAD;
   margin: 100px;
 }
+@media only screen and (max-width: 375px) {
+  main #fourContainer h2 {
+    font-size: 16px;
+  }
+}
 main #fourContainer p {
   font-family: Barlow;
   font-size: 18px;
@@ -285,6 +431,11 @@ main #fourContainer p {
   text-align: center;
   color: #5B636D;
   margin: 20px;
+}
+@media only screen and (max-width: 375px) {
+  main #fourContainer p {
+    font-size: 18px;
+  }
 }
 main #fourContainer .name {
   font-family: Fraunces 9pt Soft;
@@ -296,6 +447,11 @@ main #fourContainer .name {
   color: #24303E;
   margin-bottom: -20px;
 }
+@media only screen and (max-width: 375px) {
+  main #fourContainer .name {
+    font-size: 18px;
+  }
+}
 main #fourContainer .job {
   font-family: Barlow;
   font-size: 14px;
@@ -306,15 +462,31 @@ main #fourContainer .job {
   color: #A7AAAD;
   margin-bottom: 100px;
 }
+@media only screen and (max-width: 375px) {
+  main #fourContainer .job {
+    font-size: 14px;
+  }
+}
 main #fourContainer img {
   width: 72px;
   height: 72px;
   border-radius: 72px;
   margin: 50px;
 }
+@media only screen and (max-width: 375px) {
+  main #fourContainer img {
+    width: 72px;
+    margin: 20px;
+  }
+}
 main #fourContainer #testimonials {
   display: flex;
   justify-content: center;
+}
+@media only screen and (max-width: 375px) {
+  main #fourContainer #testimonials {
+    flex-direction: column;
+  }
 }
 main #fourContainer #testimonials #emily {
   display: flex;
@@ -334,10 +506,22 @@ main #fourContainer #testimonials #jennie {
   flex-direction: column;
   align-items: center;
 }
+@media only screen and (max-width: 375px) {
+  main #fifthContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 main #fifthContainer img {
   width: 25%;
   height: auto;
   margin: -2px;
+}
+@media only screen and (max-width: 375px) {
+  main #fifthContainer img {
+    width: 50%;
+    margin: 0;
+  }
 }
 
 footer {
@@ -370,6 +554,14 @@ footer ul li:hover {
 footer svg {
   margin: 20px;
 }
+@media only screen and (max-width: 375px) {
+  footer svg {
+    width: 20px;
+  }
+}
 footer svg:hover path {
   fill: #fff;
+}
+footer #icone {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
