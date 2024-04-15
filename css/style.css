@@ -328,14 +328,28 @@ main #thirdContainer {
 @media only screen and (max-width: 375px) {
   main #thirdContainer {
     flex-direction: column;
+    overflow: hidden;
+    height: 1200px;
+    justify-content: space-around;
   }
 }
 main #thirdContainer .text {
   padding-bottom: 30px;
   position: absolute;
 }
+@media only screen and (max-width: 375px) {
+  main #thirdContainer .text {
+    height: 50%;
+    padding-top: 250px;
+  }
+}
 main #thirdContainer img {
   width: 100%;
+}
+@media only screen and (max-width: 375px) {
+  main #thirdContainer img {
+    transform: scale(2);
+  }
 }
 main #thirdContainer #cherry {
   width: 50%;

@@ -381,14 +381,23 @@ main{
         height: 600px;
         @include mobile{
             flex-direction: column;
+            overflow: hidden;
+            height: 1200px;
+            justify-content: space-around;
         }
         .text{
             padding-bottom: 30px;
             position: absolute;
+            @include mobile{
+                height: 50%;
+                padding-top: 250px;
+                
+            }
         }
         img{
             width: 100%;
             @include mobile{
+                transform: scale(2);
                 
             }
         }
