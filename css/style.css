@@ -61,6 +61,13 @@ header nav ul {
 @media only screen and (max-width: 375px) {
   header nav ul {
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    color: #808397;
+    top: 13%;
+    left: 30%;
   }
 }
 header nav ul li {
@@ -78,9 +85,17 @@ header nav ul #contact {
   color: #24303E;
   padding: auto 16px;
 }
+@media only screen and (max-width: 375px) {
+  header nav ul #contact {
+    background-color: #FBD600;
+  }
+}
 header nav ul #contact:hover {
   background-color: rgba(255, 255, 255, 0.3);
   color: #FFFFFF;
+}
+header nav .flex {
+  display: flex;
 }
 header #arrow {
   height: 107.48px;
@@ -115,6 +130,16 @@ header #logo {
     height: 24px;
     width: auto;
   }
+}
+header .scrolledMenu {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 75%;
+  display: none;
+}
+header .block {
+  display: block;
 }
 
 main {

@@ -202,6 +202,13 @@ $mobile: 375px;
             display: flex;
             @include mobile{
                 display: none;
+                flex-direction: column;
+                justify-content: center;
+                position: absolute;
+                z-index: 1;
+                color: #808397;
+                top: 13%;
+                left: 30%;
             }
             li{
                 list-style-type: none;
@@ -217,11 +224,17 @@ $mobile: 375px;
                 border-radius: 56px;
                 color: #24303E;
                 padding: auto 16px;
+                @include mobile{
+                    background-color: #FBD600;
+                }
                 &:hover{
                     background-color: rgba(255,255,255,0.3);
                     color: #FFFFFF;
                 }
             }
+        }
+        .flex{
+            display: flex;
         }
     }
     #arrow{
@@ -251,6 +264,16 @@ $mobile: 375px;
             height: 24px;
             width: auto;
         }
+    }
+    .scrolledMenu{
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        width: 75%;
+        display: none;
+    }
+    .block{
+        display:block;
     }
 }
 
