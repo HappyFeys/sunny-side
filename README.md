@@ -1,4 +1,4 @@
-# sunny-side
+# Sunny-side
 
 ## Description
 
@@ -14,7 +14,7 @@ Sunny Side est un projet réalisé lors de la formation BeCode. Le travail consi
 
 ## Screenshot
 
-[Sunny Side](./../sunny-side/asset/images/desktop-preview.jpg)
+![alt text](image.png)
 
 ## Github Page
 
